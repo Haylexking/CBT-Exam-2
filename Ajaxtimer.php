@@ -1,16 +1,17 @@
 
 <?php
 session_start();
-include_once('admin/Conn.php');
+include_once('admin/conn.php');
 
-?>
-<?php
-$qry=mysql_query("select * from test where name='Sample'");
-$numrows=mysql_num_rows($qry);
+
+
+$qry= $conn->prepare("select * from test where name='Sample'");
+$numrows=$qry->rowCount();
 if ($numrows>0){
-	$row=mysql_fetch_assoc($qry);
+	$row=$sql->fetch(PDO::FETCH_ASSOC);
 	
-	$sql2=mysql_query("update testattempt set time=".$row['time']."-1 where stdid=".$_SESSION['stdid']."") or die (mysql_error());
+	$sql2=$conn->prepare("update testattempt set time=".$row['time']."-1 where stdid=".$_SESSION['stdid']."") ;
+	$sql2->execute();
 	
 	$init=$row['time'];
 	$minute=floor(($init/60)%60);
