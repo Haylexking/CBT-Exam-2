@@ -18,6 +18,3 @@ echo $score.'%';
 $conn->prepare("Insert into testscore (stdid,testid,score) values(". $_SESSION['stdid'].",".$_SESSION['testid'].",'$score')");
 
 session_destroy();
- ?>
-
-

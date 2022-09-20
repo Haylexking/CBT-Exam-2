@@ -26,7 +26,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="headtext">
-						XYZ International School
+						HIBC Reboot Conference
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -107,7 +107,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="footertext">
-						XYZ International School &copy; 2015
+						HIBC Reboot Conference &copy; 2022
 					</div>
 				</div>
 				<div class="col-md-3">
